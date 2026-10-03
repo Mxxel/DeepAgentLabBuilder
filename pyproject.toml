@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homelab-creator"
+version = "0.1.0"
+description = "TUI agent that co-designs isolated, assessment-style vulnerable homelabs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain-core>=1.0,<2.0",
+    "langchain>=1.0,<2.0",
+    "langchain-openai>=1.0,<2.0",
+    "langgraph>=1.0,<2.0",
+    "langgraph-checkpoint-sqlite>=2.0,<4.0",
+    "langsmith>=0.3",
+    "deepagents>=0.7,<0.8",
+    "pydantic>=2.7",
+    "PyYAML>=6.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+homelab-creator = "homelab_creator.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "docker: optional live docker compose smoke (deselect in default CI)",
+    "llm: optional live LLM (deselect in default CI)",
+]

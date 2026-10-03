@@ -1,0 +1,18 @@
+# Copy to conf.yaml in the repo root (gitignored). Do not commit secrets.
+# Dashboard: https://airouter.ch/  Docs: https://airouter.ch/docs.html
+#
+# reasoning_effort:
+#   Qwen3.8: none | low | medium (default) | xhigh
+#   DeepSeek-V4-Flash: high | xhigh
+
+airouter:
+  base_url: https://api.airouter.ch/v1
+  api_key: ""
+  model: Qwen3.8
+  reasoning_effort: medium
+
+# Optional Tavily web search for research.opted_in (public writeups only).
+# Dashboard: https://app.tavily.com/
+search:
+  api_key: ""
+
