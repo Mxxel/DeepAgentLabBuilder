@@ -1,5 +1,7 @@
 # DeepLabBuilder (homelab-creator)
 
+Build your homelabs with KI. More time for the fun part :)
+
 Interview TUI that co-designs isolated, assessment-style vulnerable homelabs (Docker Compose). The session never ends itself: you confirm stop. Objective is always **pwn the company** (full network control), not a single-flag box. Design pack: `docs/wip/vulnerable-homelab-creator/`. Code map: `docs/code.md`. Changelog: `changelog.md`.
 
 The TUI shows assessment facts (hosts, stacks, issues, topology, writeup). It does **not** print exploit PoCs or attack playbooks.
