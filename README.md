@@ -2,6 +2,19 @@
 
 Build your homelabs with KI. More time for the fun part :)
 
+This is just a pre-alpha version i build on an evening while thinking about how to simplify the process of creating vulnerable Homelabs, because from my experience HackTheBox and TryHackMe most machines are not reensembling what is awaiting you if pwning a real world infrastructure.
+The best part: Totally free if you run your own local AI!
+
+The goal of this project is to have an LLM based homelab creator, for now the lab network is created via docker.
+
+To avoid CTF like labs i implemented a research function with tavily which fetches bug bounty writeups and creates the vulnerabilitys from them, you also can add own input.
+
+You can view this as a base skeleton everyone is invited to work on so you can use more time to train your security skills instead of setting up configs for labs.
+
+Everyone is invited to contribute and, in my vision this should be developed by those wo use it, every idea / feature / fix / extension is welcome, as long as no backdoors are included :D.
+
+## Description
+
 Interview TUI that co-designs isolated, assessment-style vulnerable homelabs (Docker Compose). The session never ends itself: you confirm stop. Objective is always **pwn the company** (full network control), not a single-flag box. Design pack: `docs/wip/vulnerable-homelab-creator/`. Code map: `docs/code.md`. Changelog: `changelog.md`.
 
 The TUI shows assessment facts (hosts, stacks, issues, topology, writeup). It does **not** print exploit PoCs or attack playbooks.
